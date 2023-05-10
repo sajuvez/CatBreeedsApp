@@ -51,7 +51,7 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
         celda.catName?.text = catsData[indexPath.row].name
         //imagen del producto
         let imageUrl = "https://cdn2.thecatapi.com/images/\(catsData[indexPath.row].referenceImageId ?? "test").jpg"
-        print(imageUrl)
+        //print(imageUrl)
         if let urlString = imageUrl as? String {
             if let imageUrl = URL(string: urlString){
                 DispatchQueue.global().async {
@@ -66,21 +66,6 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
         }
         return celda
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         gatoSeleccionado = catsData[indexPath.row]
-        performSegue(withIdentifier: "productDetail", sender: self)
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "productDetail"{
-            let gatoSelected = segue.destination as! SecondViewController
-            gatoSelected.cat = gatoSeleccionado
-            //print(productoSeleccionado)
-        }
-    }
-    
     
 }
 
