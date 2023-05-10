@@ -14,6 +14,12 @@
 		52B99E912A0C09F400D6F3D1 /* CatBreeedsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52B99E8F2A0C09F400D6F3D1 /* CatBreeedsApp.xcdatamodeld */; };
 		52B99E932A0C09F500D6F3D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B99E922A0C09F500D6F3D1 /* Assets.xcassets */; };
 		52B99E962A0C09F500D6F3D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B99E942A0C09F500D6F3D1 /* LaunchScreen.storyboard */; };
+		52B99E9F2A0C0A8E00D6F3D1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 52B99E9E2A0C0A8E00D6F3D1 /* Alamofire */; };
+		52B99EA22A0C150B00D6F3D1 /* QueryCats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B99EA12A0C150B00D6F3D1 /* QueryCats.swift */; };
+		52B99EA52A0C155B00D6F3D1 /* CatDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B99EA42A0C155B00D6F3D1 /* CatDataModel.swift */; };
+		52B99EA72A0C22C100D6F3D1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B99EA62A0C22C100D6F3D1 /* SecondViewController.swift */; };
+		52B99EAA2A0C24BF00D6F3D1 /* CatViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B99EA82A0C24BF00D6F3D1 /* CatViewCellTableViewCell.swift */; };
+		52B99EAB2A0C24BF00D6F3D1 /* CatViewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B99EA92A0C24BF00D6F3D1 /* CatViewCellTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,11 @@
 		52B99E922A0C09F500D6F3D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52B99E952A0C09F500D6F3D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52B99E972A0C09F500D6F3D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52B99EA12A0C150B00D6F3D1 /* QueryCats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryCats.swift; sourceTree = "<group>"; };
+		52B99EA42A0C155B00D6F3D1 /* CatDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDataModel.swift; sourceTree = "<group>"; };
+		52B99EA62A0C22C100D6F3D1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		52B99EA82A0C24BF00D6F3D1 /* CatViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CatViewCellTableViewCell.swift; path = ViewCells/CatViewCellTableViewCell.swift; sourceTree = "<group>"; };
+		52B99EA92A0C24BF00D6F3D1 /* CatViewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CatViewCellTableViewCell.xib; path = ViewCells/CatViewCellTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B99E9F2A0C0A8E00D6F3D1 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +70,7 @@
 		52B99E852A0C09F400D6F3D1 /* CatBreeedsApp */ = {
 			isa = PBXGroup;
 			children = (
+				52B99EA02A0C14DA00D6F3D1 /* Data */,
 				52B99E862A0C09F400D6F3D1 /* AppDelegate.swift */,
 				52B99E882A0C09F400D6F3D1 /* SceneDelegate.swift */,
 				52B99E8A2A0C09F400D6F3D1 /* ViewController.swift */,
@@ -66,8 +79,28 @@
 				52B99E942A0C09F500D6F3D1 /* LaunchScreen.storyboard */,
 				52B99E972A0C09F500D6F3D1 /* Info.plist */,
 				52B99E8F2A0C09F400D6F3D1 /* CatBreeedsApp.xcdatamodeld */,
+				52B99EA62A0C22C100D6F3D1 /* SecondViewController.swift */,
 			);
 			path = CatBreeedsApp;
+			sourceTree = "<group>";
+		};
+		52B99EA02A0C14DA00D6F3D1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				52B99EA32A0C154A00D6F3D1 /* Model */,
+				52B99EA12A0C150B00D6F3D1 /* QueryCats.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		52B99EA32A0C154A00D6F3D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52B99EA42A0C155B00D6F3D1 /* CatDataModel.swift */,
+				52B99EA82A0C24BF00D6F3D1 /* CatViewCellTableViewCell.swift */,
+				52B99EA92A0C24BF00D6F3D1 /* CatViewCellTableViewCell.xib */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +119,9 @@
 			dependencies = (
 			);
 			name = CatBreeedsApp;
+			packageProductDependencies = (
+				52B99E9E2A0C0A8E00D6F3D1 /* Alamofire */,
+			);
 			productName = CatBreeedsApp;
 			productReference = 52B99E832A0C09F400D6F3D1 /* CatBreeedsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +150,9 @@
 				Base,
 			);
 			mainGroup = 52B99E7A2A0C09F400D6F3D1;
+			packageReferences = (
+				52B99E9D2A0C0A8E00D6F3D1 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 52B99E842A0C09F400D6F3D1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -131,6 +170,7 @@
 				52B99E962A0C09F500D6F3D1 /* LaunchScreen.storyboard in Resources */,
 				52B99E932A0C09F500D6F3D1 /* Assets.xcassets in Resources */,
 				52B99E8E2A0C09F400D6F3D1 /* Main.storyboard in Resources */,
+				52B99EAB2A0C24BF00D6F3D1 /* CatViewCellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,8 +183,12 @@
 			files = (
 				52B99E8B2A0C09F400D6F3D1 /* ViewController.swift in Sources */,
 				52B99E912A0C09F400D6F3D1 /* CatBreeedsApp.xcdatamodeld in Sources */,
+				52B99EA52A0C155B00D6F3D1 /* CatDataModel.swift in Sources */,
 				52B99E872A0C09F400D6F3D1 /* AppDelegate.swift in Sources */,
+				52B99EA72A0C22C100D6F3D1 /* SecondViewController.swift in Sources */,
+				52B99EA22A0C150B00D6F3D1 /* QueryCats.swift in Sources */,
 				52B99E892A0C09F400D6F3D1 /* SceneDelegate.swift in Sources */,
+				52B99EAA2A0C24BF00D6F3D1 /* CatViewCellTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +406,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		52B99E9D2A0C0A8E00D6F3D1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		52B99E9E2A0C0A8E00D6F3D1 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52B99E9D2A0C0A8E00D6F3D1 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		52B99E8F2A0C09F400D6F3D1 /* CatBreeedsApp.xcdatamodeld */ = {
